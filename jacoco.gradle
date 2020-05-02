@@ -11,7 +11,7 @@ tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
 }
 
-task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
+final def task = task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
     group       = 'Reporting'
     description = 'Generate JaCoCo coverage reports'
 
@@ -42,7 +42,8 @@ task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
             ]
     )
 
-    sourceDirectories = files(coverageSourceDirs)
+    final def collection = sourceDirectories = files(coverageSourceDirs)
+    collection
     executionData     = fileTree(
             dir     : "$buildDir",
             include : [ 'jacoco/testDebugUnitTest.exec', 'outputs/code_coverage/debugAndroidTest/connected/*coverage.ec' ]
@@ -56,6 +57,7 @@ task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
         }
     }
 }
+task
 
 task jacocoTestReportLocal(type : JacocoReport, dependsOn : ['testDebugUnitTest', 'createDebugCoverageReport']) {
     group       = 'Reporting'
