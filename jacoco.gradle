@@ -11,7 +11,7 @@ tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
 }
 
-final def task = task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
+task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
     group       = 'Reporting'
     description = 'Generate JaCoCo coverage reports'
 
@@ -20,7 +20,7 @@ final def task = task jacocoTestReport(type : JacocoReport, dependsOn : ['testDe
         html.enabled = true
     }
 
-    final def tree = classDirectories = fileTree(
+    classDirectories = fileTree(
             dir      : 'build/intermediates/javac/debug/classes/com/example',
             excludes : [
                     '**/R.class',
@@ -41,10 +41,8 @@ final def task = task jacocoTestReport(type : JacocoReport, dependsOn : ['testDe
                     '**/models/**'
             ]
     )
-    tree
 
-    final def collection = sourceDirectories = files(coverageSourceDirs)
-    collection
+    sourceDirectories = files(coverageSourceDirs)
     executionData     = fileTree(
             dir     : "$buildDir",
             include : [ 'jacoco/testDebugUnitTest.exec', 'outputs/code_coverage/debugAndroidTest/connected/*coverage.ec' ]
@@ -58,20 +56,19 @@ final def task = task jacocoTestReport(type : JacocoReport, dependsOn : ['testDe
         }
     }
 }
-task
 
-task jacocoTestReportLocal(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
-    group = 'Reporting'
+task jacocoTestReportLocal(type : JacocoReport, dependsOn : ['testDebugUnitTest', 'createDebugCoverageReport']) {
+    group       = 'Reporting'
     description = 'Generate JaCoCo coverage reports'
 
     reports {
-        xml.enabled = true
+        xml.enabled  = true
         html.enabled = true
     }
 
-    final def tree = classDirectories = fileTree(
-            dir: 'build/intermediates/javac/debug/classes/com/example',
-            excludes: [
+    classDirectories = fileTree(
+            dir      : 'build/intermediates/javac/debug/classes/com/example',
+            excludes : [
                     '**/R.class',
                     '**/R$*.class',
                     '**/*$ViewInjector*.*',
@@ -90,12 +87,11 @@ task jacocoTestReportLocal(type: JacocoReport, dependsOn: ['testDebugUnitTest', 
                     '**/models/**'
             ]
     )
-    tree
 
     sourceDirectories = files(coverageSourceDirs)
-    executionData = fileTree(
-            dir: "$buildDir",
-            include: ['jacoco/testDebugUnitTest.exec', 'outputs/code_coverage/debugAndroidTest/connected/*coverage.ec']
+    executionData     = fileTree(
+            dir     : "$buildDir",
+            include : [ 'jacoco/testDebugUnitTest.exec', 'outputs/code_coverage/debugAndroidTest/connected/*coverage.ec' ]
     )
 
     doFirst {
