@@ -1,12 +1,15 @@
 <resources>
-    <string name="app_name">HelloWorld2</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_name">SignUpForm</string>
+    <string name="submit">Submit</string>
+    <string name="textView">TextView</string>
+    <string name="signupapp">DatingApp!</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_age">Enter your age</string>
+    <string name="enter_description">Something about you</string>
+    <string name="enter_occupation">Enter your occupation</string>
+    <string name="credentials">credentials</string>
+    <string name="enter_dob">enter your date of birth</string>
+    <string name="welcomeToDating">Welcome to Online Dating</string>
 </resources>
+

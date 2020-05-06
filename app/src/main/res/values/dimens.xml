@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="titleTextSize">30sp</dimen>
+    <dimen name="navBarTextSize">20sp</dimen>
+    <dimen name ="textSize">30dp</dimen>
+    <dimen name="thirty">30sp</dimen>
+    <dimen name="ten">20sp</dimen>
+    <dimen name="topMargin">250dp</dimen>
+    <dimen name="topMarginImage">25dp</dimen>
+    <dimen name="imageWidth">200dp</dimen>
+    <dimen name="imageHeight">200dp</dimen>
+    <dimen name="topMarginOfDescription">325dp</dimen>
+    <item name="horizontalButton" type="dimen" format="float">0.50</item>
+    <item name="verticalButton" type="dimen" format="float">0.95</item>
 </resources>
