@@ -11,5 +11,19 @@
     <string name="credentials">credentials</string>
     <string name="enter_dob">enter your date of birth</string>
     <string name="welcomeToDating">Welcome to Online Dating</string>
+    <string name="name">Name:\u0020"</string>
+    <string name="age">Age:\u0020"</string>
+    <string name="email">Email:\u0020</string>
+    <string name="description">Description:\u0020</string>
+    <string name="occupation">Occupation:\u0020</string>
+    <string name="dateOfBirth">Date Of Birth:\u0020</string>
+    <string name="date_picker">date picker</string>
+    <string name="not_18">Not 18</string>
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="invalid_email">invalid email</string>
+    <string name="age_cannot_be_empty">age cannot be empty</string>
+    <string name="description_cannot_be_empty">description cannot be empty</string>
+    <string name="occupation_cannot_be_empty">occupation cannot be empty</string>
+    <string name="dateOfBirth_cannot_be_empty">dateOfBirth cannot be empty</string>
 </resources>
 

@@ -10,6 +10,23 @@
     <dimen name="imageWidth">200dp</dimen>
     <dimen name="imageHeight">200dp</dimen>
     <dimen name="topMarginOfDescription">325dp</dimen>
+    <dimen name="name_padding">25dp</dimen>
+    <dimen name="age_padding">25dp</dimen>
+    <dimen name="email_padding">25dp</dimen>
+    <dimen name="description_padding">25dp</dimen>
+    <dimen name="occupation_padding">25dp</dimen>
+    <dimen name="dateOfBirth_padding">25dp</dimen>
+    <dimen name="age_margin">150dp</dimen>
     <item name="horizontalButton" type="dimen" format="float">0.50</item>
     <item name="verticalButton" type="dimen" format="float">0.95</item>
+    <item name="nav_vertical" type="dimen" format="float">0.05</item>
+    <item name="title_vertical" type="dimen" format="float">0.156</item>
+    <item name="name_vertical" type="dimen" format="float">0.244</item>
+    <item name="email_vertical" type="dimen" format="float">0.333</item>
+    <item name="age_vertical" type="dimen" format="float">0.437</item>
+    <item name="description_vertical" type="dimen" format="float">0.53</item>
+    <item name="occupation_vertical" type="dimen" format="float">0.629</item>
+    <item name="dateOfBirth_vertical" type="dimen" format="float">0.731</item>
+    <item name="button_horizontal" type="dimen" format="float">0.498</item>
+    <item name="button_vertical" type="dimen" format="float">0.945</item>
 </resources>

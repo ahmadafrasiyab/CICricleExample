@@ -59,12 +59,12 @@ public class Main2Activity extends AppCompatActivity {
             if (b.containsKey(Constants.KEY_DATE_OF_BIRTH)) {
                 dateOfBirth = b.getString(Constants.KEY_DATE_OF_BIRTH);
             }
-            name = "Name: " + name;
-            age  =  "Age: " + age;
-            email ="Email: " + email;
-            description = "Description: " + description;
-            occupation = "Occupation: " + occupation;
-            dateOfBirth = "Date Of Birth: " + dateOfBirth;
+            name = getString(R.string.name) + name;
+            age  =  getString(R.string.age) + age;
+            email =getString(R.string.email) + email;
+            description = getString(R.string.description) + description;
+            occupation = getString(R.string.occupation) + occupation;
+            dateOfBirth = getString(R.string.dateOfBirth) + dateOfBirth;
 
             textViewName.setText(name);
             textViewAge.setText(age);

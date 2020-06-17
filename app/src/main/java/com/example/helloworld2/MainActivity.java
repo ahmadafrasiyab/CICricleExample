@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             @Override
             public void onClick(View v) {
                 DialogFragment datePicker = new DatePickerFragment();
-                datePicker.show(getSupportFragmentManager(), "date picker");
+                datePicker.show(getSupportFragmentManager(), getString(R.string.date_picker));
             }
         });
     }
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         Calendar c = Calendar.getInstance();
 
         if (year >= 2003) {
-            Toast.makeText(this, "Not 18", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.not_18, Toast.LENGTH_LONG).show();
             return;
         } else {
             c.set(Calendar.YEAR, year);
@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onRestart() {
+        super.onRestart();
         EditText txt1 = (EditText)findViewById(R.id.name);
         EditText txt2 = (EditText)findViewById(R.id.email);
         EditText txt3 = (EditText)findViewById(R.id.age);
@@ -91,32 +91,32 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         dateOfBirth = txt6.getText().toString();
 
         while (name.isEmpty()) {
-            txt1.setError("Name cannot be empty");
+            txt1.setError(getString(R.string.name_cannot_be_empty));
             return;
         }
 
         while((email.isEmpty()) || (!email.matches("[a-zA-Z0-9._-]+@[a-z]+.[a-z]+"))) {
-            txt2.setError("invalid email");
+            txt2.setError(getString(R.string.invalid_email));
             return;
         }
 
         while ((age.isEmpty())) {
-            txt4.setError("age cannot be empty");
+            txt4.setError(getString(R.string.age_cannot_be_empty));
             return;
         }
 
         while ((description.isEmpty())) {
-            txt4.setError("description cannot be empty");
+            txt4.setError(getString(R.string.description_cannot_be_empty));
             return;
         }
 
         while ((occupation.isEmpty())) {
-            txt4.setError("occupation cannot be empty");
+            txt4.setError(getString(R.string.occupation_cannot_be_empty));
             return;
         }
 
         while ((dateOfBirth.isEmpty())) {
-            txt4.setError("dateOfBirth cannot be empty");
+            txt4.setError(getString(R.string.dateOfBirth_cannot_be_empty));
             return;
         }
 
